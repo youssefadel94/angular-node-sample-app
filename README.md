@@ -1,5 +1,3 @@
-This is AAIB Task For Full Stack Developer 
-
 To start the application open two terminals (windows)
  first terminal cd to server then run "npm i && npm start" after it finishes 
  go to second terminal cd to frontEnd and run "npm i && ng serve"
