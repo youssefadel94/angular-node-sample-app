@@ -1,0 +1,25 @@
+<div class="row">
+    <h1 class="col-lg-12 mx no border">
+        Reports
+    </h1>
+    <ng-container *ngFor="let report of reports; let i = index">
+        <div *ngIf="report.state == 'OPEN'" class="col-lg-10 mx">
+            <div class="col-lg-4">
+                <p>Id: {{report.id}} </p>
+                <p>State:{{report.state}}</p>
+                <a href="#">Details</a>
+            </div>
+            <div class="col-lg-4">
+                <p>Type: Spam</p>
+                <p>Message: {{report.payload.message}}</p>
+            </div>
+            <div class="col-lg-4">
+                <div class="col-lg-12"><button class="col-lg-4 m" (click)="updateReport(report.id,'BLOCK')"
+                        type="button">Block</button></div>
+                <div class="col-lg-12"><button class="col-lg-4 m" (click)="updateReport(report.id,'RESOLVE')"
+                        type="button">Resolve</button></div>
+            </div>
+        </div>
+
+    </ng-container>
+</div>
